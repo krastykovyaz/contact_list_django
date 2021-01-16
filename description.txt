@@ -1,0 +1,48 @@
+We are need sqlite, browser.
+
+create project:
+django-admin startproject contactproject
+
+manage.py - control django
+contactproject - container (we cannot use django reserve names)
+seetings.py - configurations of the project
+urls.py - map the browser
+wsgi.py asgi.py - is used to production development (we don't use)
+
+go to the terminal and run server
+python3 manage.py runserver
+http://127.0.0.1:8000/
+u can use another port: python3 manage.py runserver 8765
+
+create app
+python3 manage.py startapp contactlist
+__init__.py - constructor
+app.py - CLASS cofigs for app
+models.py - about database model obj
+views - pages fpr app #frotend
+
+make changes and again:
+python3 manage.py runserver
+http://127.0.0.1:8000/contactproject
+
+create model and insert app to seetings.py
+
+python3 manage.py makemigrations contactlist
+
+python3 manage.py sqlmigrate contactlist 0001
+
+python3 manage.py migrate
+
+open and check database in sqllite3
+
+creare admin app:
+
+python3 manage.py createsuperuser
+
+change admin.py
+http://127.0.0.1:8000/admin
+
+add smth and check in a database sqllite3
+
+create function in a views.py and the method in a Class in the models.python3 manage.py
+do not forget insert psth yo urls.py
